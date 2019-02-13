@@ -25,19 +25,19 @@ ul{
 }
 
 .border{
-  border: 2px solid black;
   border-radius: 5px;
-  margin: 1.2em;
+  margin: .4em;
   padding: .3em;
-  max-width: 95%;
+  //max-width: 95%;
   //max-height:23vh;
-}
+}/*
 .imgDescr{
   margin: 1em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-}
+  //height: 6em;
+}*/
 .image{
   background-position: center;
   background-repeat: no-repeat;
@@ -48,9 +48,6 @@ object-fit: cover;
 }
 p{
   margin-left: 2em;
-  text-align: justify;
-  display: flex;
-  flex-wrap: wrap;
   width: 80%;
 }
 .modal-body{

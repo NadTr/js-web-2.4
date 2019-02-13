@@ -145,8 +145,10 @@ async function getCharacters() {
 
 function displayDescription(index) {
     let oneChar=document.querySelector(".CharCase"+index);
-    let title=converter.makeHtml(list[index].name);
-    let body=converter.makeHtml(list[index].description);
+    let title=markdown.toHTML(list[index].name);
+    let body=markdown.toHTML(list[index].description);
+    if(index == 0)
+      console.log(body);
     document.querySelector('.modal-title').innerHTML = '';
     document.querySelector('.modal-body').innerHTML = '';
     document.querySelector('.modal-footer').innerHTML = '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
