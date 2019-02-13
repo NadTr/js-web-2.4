@@ -17,39 +17,43 @@
 /*
   If you need some CSS for any reason you can put it here.
 */
-
 ul{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
-
 .border{
+  text-align:  center;
   border-radius: 5px;
   margin: .4em;
   padding: .3em;
-  //max-width: 95%;
-  //max-height:23vh;
-}/*
-.imgDescr{
-  margin: 1em;
+  max-width: 16em;
+  height: auto;
+}
+
+
+.column{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-around;
   //height: 6em;
+}
+/*
+.bottom{
+  position: relative;
+  bottom:0;
 }*/
-.image{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-object-fit: cover;
+img{
+  margin: auto;
+  object-fit: contain;
   width: 100px;
   height: 100px;
 }
 p{
-  margin-left: 2em;
-  width: 80%;
+  margin: auto;
 }
+
 .modal-body{
   display: flex;
   flex-direction: column;

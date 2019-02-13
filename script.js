@@ -31,23 +31,24 @@ async function getCharacters() {
      let div=document.createElement("div");
      div.className='border'
      let li = document.createElement("li");
-     li.className="CharCase"+i;
+     li.className='column CharCase'+i;
      li.setAttribute('data-toggle', 'modal');
      li.setAttribute('data-target', '.modal');
      li.addEventListener("click",() =>displayDescription(i));
     // li.id=Char[0];
     let h2 = document.createElement("h2");
-    let flex = document.createElement("div");
-    flex.className="imgDescr";
-     let img =document.createElement("div");
+
+    let img = new Image();
      img.className="image"
      let p = document.createElement("p");
      let CharName= document.createTextNode(list[i].name);
      let CharDescr= document.createTextNode(list[i].shortDescription);
      let empty=document.createTextNode("      ");
      if(list[i].image)
-      img.style.backgroundImage = "url(data:image/gif;base64,"+list[i].image+")";
+      img.src = 'data:image/jpg;base64,'+list[i].image;
 
+      let bottom=document.createElement("div");
+      bottom.className='bottom'
      let buttonEdit=document.createElement("button");
      buttonEdit.className='btn btn-primary edit';
      let ButtonText= document.createTextNode("Edit");
@@ -59,15 +60,14 @@ async function getCharacters() {
      let ButtonTxt= document.createTextNode("Delete");
      buttonDelete.appendChild(ButtonTxt);
      h2.appendChild(CharName);
-     img.appendChild(empty);
      p.appendChild(CharDescr);
-     flex.appendChild(img);
-     flex.appendChild(p);
      li.appendChild(h2);
-     li.appendChild(flex);
+     li.appendChild(img);
+     li.appendChild(p);
+     bottom.appendChild(buttonEdit);
+     bottom.appendChild(buttonDelete);
      div.appendChild(li);
-     div.appendChild(buttonEdit);
-     div.appendChild(buttonDelete);
+     div.appendChild(bottom);
      inside.appendChild(div);
 
      buttonDelete.addEventListener("click",async()=>{
